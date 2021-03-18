@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -240,16 +244,17 @@ ul {
 .table {
   margin-bottom: 0px;
 }
+
 .table h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-li:nth-child(2) > div {
+li:nth-child(2)>div {
   border-top: 1px solid #ecedef;
 }
 
-li:nth-child(5) > div {
+li:nth-child(5)>div {
   border-bottom: 1px solid #ecedef;
 }
 
@@ -269,6 +274,7 @@ li:nth-child(5) > div {
   font-size: 16px;
   line-height: 21px;
 }
+
 .text {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -278,10 +284,9 @@ li:nth-child(5) > div {
   line-height: 22px;
 }
 
-
 /* GRID EXAMPLE */
 
-.grid > h2 {
+.grid>h2 {
   font-size: 20px;
   line-height: 26px;
   font-weight: 400;
@@ -316,10 +321,121 @@ li:nth-child(5) > div {
 }
 
 svg.icon {
+  display: inline-block;
   margin-left: 30px;
   position: relative;
   top: 5px;
   height: 25px;
   margin-right: 7px;
   fill: #80868b;
+}
+
+/* SEARCH RESULTS */
+
+.search-grid {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-logo-start, .search-logo, .search-logo-end {
+  background: url(./icon/googlelogo_color_92x30dp.png) no-repeat;
+  background-position: 0 0;
+  background-size: 167px;
+  width: 44px;
+  height: 46px;
+}
+
+.search-logo-end {
+  background-position: -100px 0;
+  width: 65px;
+  height: 56px;
+}
+
+.search-logo {
+  background-position: -73px 0;
+  width: 29px;
+  height: 46px;
+}
+
+div * > div.search-number {
+  color: #4285f4;
+}
+
+div:nth-child(2) > div.search-number {
+  color: rgba(0, 0, 0, 0.87);
+}
+/* FOOTER */
+
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+footer h2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+footer h3 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+footer div.top {
+  display: flex;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #70757a;
+  border-radius: 10px;
+  position: relative;
+  top: 11.5px;
+  margin-right: 3px;
+}
+
+footer div.top h1 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+footer div.top h2 {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.divider-footer {
+  display: inline-block;
+  position: relative;
+  border-left: 1px solid #dadce0;
+  width: 20px;
+  top: 8px;
+  left: 15px;
+  height: 24px;
+}
+
+.footer-line {
+  margin: 0px -2000px;
+  height: 1px;
+  background-color: #dadce0;
+  border: none;
+}
+
+footer div.bottom {
+  display: flex;
+  margin-left: 6px;
 }

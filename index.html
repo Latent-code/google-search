@@ -1,257 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://storage.googleapis.com/non-spec-apps/mio-icons/latest/outline.css">
 
   <link rel="stylesheet" href="style.css">
   <title>Google search result</title>
 
 </head>
+
 <body>
 
   <section class="container header">
     <div class="search-bar">
       <img src="./icon/googlelogo_color_92x30dp.png" alt="">
-      <input class="input" type="search">
+      <input class="input" id="input-main" type="search">
       <a href="#">
-        <svg class="svg" onClick="this.setAttribute("value", "")" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24">
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+          </path>
+        </svg>
       </a>
       <span class="divider"></span>
 
       <a href="#">
-        <svg class="svg" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path></svg>
+        <svg class="svg" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+            fill="#4285f4"></path>
+          <path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path>
+          <path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+            fill="#f4b400"></path>
+          <path
+            d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+            fill="#ea4335"></path>
+        </svg>
       </a>
 
       <a href="#">
-        <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+        <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+          </path>
+        </svg>
       </a>
     </div>
     <!-- SCROLL MENU!! -->
     <div class="bg scroll">
       <div class="search-bar search-bar-scroll scroll">
         <img src="./icon/googlelogo_color_92x30dp.png" alt="">
-        <input class="input input-scroll" type="search">
+        <input class="input" id="input-scroll" type="search">
         <a href="#">
-          <svg class="svg" onClick="this.setAttribute("value", "")" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+          <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+            </path>
+          </svg>
         </a>
         <span class="divider"></span>
         <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path></svg>
+          <svg class="svg" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"
+              fill="#4285f4"></path>
+            <path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path>
+            <path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"
+              fill="#f4b400"></path>
+            <path
+              d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
+              fill="#ea4335"></path>
+          </svg>
         </a>
         <a href="#">
-          <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+          <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
         </a>
-    </div>
+      </div>
       <hr class="header-line-scroll scroll">
     </div>
 
-  <div class="categories">
-    <div class="category-left">
-      <div class="category all">
-        <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24"><path fill="#34a853" d="M10 2v2a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8"></path><path fill="#ea4335" d="M10 4V2a8 8 0 0 0-8 8h2c0-3.3 2.7-6 6-6"></path><path fill="#fbbc04" d="M4 10H2a8 8 0 0 0 8 8v-2c-3.3 0-6-2.69-6-6"></path><path fill="#4285f4" d="M22 20.59l-5.69-5.69A7.96 7.96 0 0 0 18 10h-2a6 6 0 0 1-6 6v2c1.85 0 3.52-.64 4.88-1.68l5.69 5.69L22 20.59"></path></svg>
-          <span>All</span>
-        </a>
+    <div class="categories">
+      <div class="category-left">
+        <div class="category all">
+          <a href="#">
+            <svg class="svg" focusable="false" viewBox="0 0 24 24">
+              <path fill="#34a853" d="M10 2v2a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8"></path>
+              <path fill="#ea4335" d="M10 4V2a8 8 0 0 0-8 8h2c0-3.3 2.7-6 6-6"></path>
+              <path fill="#fbbc04" d="M4 10H2a8 8 0 0 0 8 8v-2c-3.3 0-6-2.69-6-6"></path>
+              <path fill="#4285f4"
+                d="M22 20.59l-5.69-5.69A7.96 7.96 0 0 0 18 10h-2a6 6 0 0 1-6 6v2c1.85 0 3.52-.64 4.88-1.68l5.69 5.69L22 20.59">
+              </path>
+            </svg>
+            <span>All</span>
+          </a>
+        </div>
+        <div class="category">
+          <a href="#">
+            <svg class="svg" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M14 13l4 5H6l4-4 1.79 1.78L14 13zm-6.01-2.99A2 2 0 0 0 8 6a2 2 0 0 0-.01 4.01zM22 5v14a3 3 0 0 1-3 2.99H5c-1.64 0-3-1.36-3-3V5c0-1.64 1.36-3 3-3h14c1.65 0 3 1.36 3 3zm-2.01 0a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h7v-.01h7a1 1 0 0 0 1-1V5">
+              </path>
+            </svg>
+            <span>Images</span>
+          </a>
+        </div>
+        <div class="category">
+          <a href="#">
+            <svg class="svg" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm14.5 2H5a3 3 0 0 1-3-3V4.4A2.4 2.4 0 0 1 4.4 2h15.2A2.4 2.4 0 0 1 22 4.4v15.1a2.5 2.5 0 0 1-2.5 2.5">
+              </path>
+            </svg>
+            <span>Videos</span>
+          </a>
+        </div>
+        <div class="category">
+          <a href="#">
+            <svg class="svg" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M12 11h6v2h-6v-2zm-6 6h12v-2H6v2zm0-4h4V7H6v6zm16-7.22v12.44c0 1.54-1.34 2.78-3 2.78H5c-1.64 0-3-1.25-3-2.78V5.78C2 4.26 3.36 3 5 3h14c1.64 0 3 1.25 3 2.78zM19.99 12V5.78c0-.42-.46-.78-1-.78H5c-.54 0-1 .36-1 .78v12.44c0 .42.46.78 1 .78h14c.54 0 1-.36 1-.78V12zM12 9h6V7h-6v2">
+              </path>
+            </svg>
+            <span>News</span>
+          </a>
+        </div>
+        <div class="category">
+          <a href="#">
+            <svg class="svg" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M21.11 2.89A3.02 3.02 0 0 0 18.95 2h-5.8c-.81 0-1.58.31-2.16.89L7.25 6.63 2.9 10.98a3.06 3.06 0 0 0 0 4.32l5.79 5.8a3.05 3.05 0 0 0 4.32.01l8.09-8.1c.58-.58.9-1.34.9-2.16v-5.8c0-.81-.32-1.59-.89-2.16zM20 10.85c0 .28-.12.54-.32.74l-3.73 3.74-4.36 4.36c-.41.41-1.08.41-1.49 0l-2.89-2.9-2.9-2.9a1.06 1.06 0 0 1 0-1.49l8.1-8.1c.2-.2.46-.3.74-.3l5.8-.01A1.05 1.05 0 0 1 20 5.05v5.8zM16 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2">
+              </path>
+            </svg>
+            <span>Shopping</span>
+          </a>
+        </div>
+        <div class="category">
+          <a href="#">
+            <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+              </path>
+            </svg>
+            <span>More</span>
+          </a>
+        </div>
       </div>
-      <div class="category">
-        <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24"><path d="M14 13l4 5H6l4-4 1.79 1.78L14 13zm-6.01-2.99A2 2 0 0 0 8 6a2 2 0 0 0-.01 4.01zM22 5v14a3 3 0 0 1-3 2.99H5c-1.64 0-3-1.36-3-3V5c0-1.64 1.36-3 3-3h14c1.65 0 3 1.36 3 3zm-2.01 0a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h7v-.01h7a1 1 0 0 0 1-1V5"></path></svg>
-          <span>Images</span>
-        </a>
-      </div>
-      <div class="category">
-        <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24"><path d="M10 16.5l6-4.5-6-4.5v9zM5 20h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1zm14.5 2H5a3 3 0 0 1-3-3V4.4A2.4 2.4 0 0 1 4.4 2h15.2A2.4 2.4 0 0 1 22 4.4v15.1a2.5 2.5 0 0 1-2.5 2.5"></path></svg>
-          <span>Videos</span>
-        </a>
-      </div>
-      <div class="category">
-        <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24"><path d="M12 11h6v2h-6v-2zm-6 6h12v-2H6v2zm0-4h4V7H6v6zm16-7.22v12.44c0 1.54-1.34 2.78-3 2.78H5c-1.64 0-3-1.25-3-2.78V5.78C2 4.26 3.36 3 5 3h14c1.64 0 3 1.25 3 2.78zM19.99 12V5.78c0-.42-.46-.78-1-.78H5c-.54 0-1 .36-1 .78v12.44c0 .42.46.78 1 .78h14c.54 0 1-.36 1-.78V12zM12 9h6V7h-6v2"></path></svg>
-          <span>News</span>
-        </a>
-      </div>
-      <div class="category">
-        <a href="#">
-          <svg class="svg" focusable="false" viewBox="0 0 24 24"><path d="M21.11 2.89A3.02 3.02 0 0 0 18.95 2h-5.8c-.81 0-1.58.31-2.16.89L7.25 6.63 2.9 10.98a3.06 3.06 0 0 0 0 4.32l5.79 5.8a3.05 3.05 0 0 0 4.32.01l8.09-8.1c.58-.58.9-1.34.9-2.16v-5.8c0-.81-.32-1.59-.89-2.16zM20 10.85c0 .28-.12.54-.32.74l-3.73 3.74-4.36 4.36c-.41.41-1.08.41-1.49 0l-2.89-2.9-2.9-2.9a1.06 1.06 0 0 1 0-1.49l8.1-8.1c.2-.2.46-.3.74-.3l5.8-.01A1.05 1.05 0 0 1 20 5.05v5.8zM16 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"></path></svg>
-          <span>Shopping</span>
-        </a>
-      </div>
-      <div class="category" >
-        <a href="#">
-          <svg class="svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg>
-          <span>More</span>
-        </a>
+      <div class="category-right">
+        <a href="#">Settings</a>
+        <a href="#">Tools</a>
       </div>
     </div>
-    <div class="category-right">
-      <a href="#">Settings</a>
-      <a href="#">Tools</a>
-    </div>
-  </div>
-  <hr class="header-line">
-  <div id="stick-here"></div>
-</section>
+    <hr class="header-line">
+    <div id="stick-here"></div>
+  </section>
 
 
-<section class="container-inner">
-<p>About 2,790,000,000 results (0.67 seconds) </p>
+  <section class="container-inner">
+    <p>About 2,790,000,000 results (0.67 seconds) </p>
 
-<ul>
-  <li class="result-item">
-    <h1>81 years old</h1>
-    <h3>The short answer is that Rudolph the red-nosed reindeer is 81 years old.</h3>
-    <h4 class="hedline"><a href="#">How Old Is Rudolph the Red-Nosed Reindeer? He's 81!</a></h4>
-    <div class="link">https://www.smithsonianmag.com/innovation/magical-animation-rudolph-red-nosed-reindeer-180973841/</div>
-  </li>
+    <ul>
+      <li class="result-item">
+        <h1>81 years old</h1>
+        <h3>The short answer is that Rudolph the red-nosed reindeer is 81 years old.</h3>
+        <h4 class="hedline"><a href="#">How Old Is Rudolph the Red-Nosed Reindeer? He's 81!</a></h4>
+        <div class="link">
+          https://www.smithsonianmag.com/innovation/magical-animation-rudolph-red-nosed-reindeer-180973841/</div>
+      </li>
 
-  <li class="result-item table">
-    <h2>People also ask</h2>
-    <div class="table-row">
-      <h3>Who is Santa's oldest reindeer?</h3>
-      <span>
-        <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-      </span>
-    </div>
-  </li>
-  <li class="result-item table">
-    <div class="table-row">
-      <h3>How old is the original Rudolph?</h3>
-      <span>
-        <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-      </span>
-    </div>
-  </li>
-  <li class="result-item table">
-    <div class="table-row">
-      <h3>How old is Santa's sleigh?</h3>
-      <span>
-        <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-      </span>
-    </div>
-  </li>
-  <li class="result-item table">
-    <div class="table-row">
-      <h3>What is Rudolph's birthday?</h3>
-      <span>
-        <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
-      </span>
-    </div>
-  </li>
+      <li class="result-item table">
+        <h2>People also ask</h2>
+        <div class="table-row">
+          <h3>Who is Santa's oldest reindeer?</h3>
+          <span>
+            <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+            </svg>
+          </span>
+        </div>
+      </li>
+      <li class="result-item table">
+        <div class="table-row">
+          <h3>How old is the original Rudolph?</h3>
+          <span>
+            <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+            </svg>
+          </span>
+        </div>
+      </li>
+      <li class="result-item table">
+        <div class="table-row">
+          <h3>How old is Santa's sleigh?</h3>
+          <span>
+            <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+            </svg>
+          </span>
+        </div>
+      </li>
+      <li class="result-item table">
+        <div class="table-row">
+          <h3>What is Rudolph's birthday?</h3>
+          <span>
+            <svg class="content-svg" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path>
+            </svg>
+          </span>
+        </div>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer - Wikipedia</a></h4>
-    <div class="link">https://www.emailsanta.com/santa-claus-faq/how-old-is-rudolph-the-red-nosed-reindeer.asp#:~:text=The%20short%20answer%20is%20that,reindeer%20is%2081%20years%20old.</div>
-    <p class="text">The story is owned by The Rudolph Company, LP and has been adapted and shaped in numerous forms including a popular song by Johnny Marks, the iconic 1964 stop-motion animated television special and its two sequels from Rankin/Bass Productions, as well as the 1998 traditional animated feature film and a 2001 CGI sequel from GoodTimes Entertainment.</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer - Wikipedia</a></h4>
+        <div class="link">
+          https://www.emailsanta.com/santa-claus-faq/how-old-is-rudolph-the-red-nosed-reindeer.asp#:~:text=The%20short%20answer%20is%20that,reindeer%20is%2081%20years%20old.
+        </div>
+        <p class="text">The story is owned by The Rudolph Company, LP and has been adapted and shaped in numerous forms
+          including a popular song by Johnny Marks, the iconic 1964 stop-motion animated television special and its two
+          sequels from Rankin/Bass Productions, as well as the 1998 traditional animated feature film and a 2001 CGI
+          sequel from GoodTimes Entertainment.</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">The History Of Rudolph The Red-Nosed Reindeer : NPR </a></h4>
-    <div class="link">https://www.npr.org/2015/12/25/461005670/the-history-of-rudolph-the-red-nosed-reindeer</div>
-    <p class="text">The year was 1939, the Great Depression was waning and a manager at Montgomery Ward in Chicago decided that the store should create its own children's book for the annual holiday promotion.</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">The History Of Rudolph The Red-Nosed Reindeer : NPR </a></h4>
+        <div class="link">https://www.npr.org/2015/12/25/461005670/the-history-of-rudolph-the-red-nosed-reindeer</div>
+        <p class="text">The year was 1939, the Great Depression was waning and a manager at Montgomery Ward in Chicago
+          decided that the store should create its own children's book for the annual holiday promotion.</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">12 'Rudolph the Red-Nosed Reindeer' facts for its 50th</a></h4>
-    <div class="link">https://mashable.com/2014/12/06/rudolph-the-red-nosed-reindeer-tv-special-facts/</div>
-    <p class="text">Rudolph measured 4-inches high and Santa stood 8-inches. And though he appears relatively large on screen, the Bumble figurine stood 14-inches tall.</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">12 'Rudolph the Red-Nosed Reindeer' facts for its 50th</a></h4>
+        <div class="link">https://mashable.com/2014/12/06/rudolph-the-red-nosed-reindeer-tv-special-facts/</div>
+        <p class="text">Rudolph measured 4-inches high and Santa stood 8-inches. And though he appears relatively large
+          on screen, the Bumble figurine stood 14-inches tall.</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">The Magical Animation of ‘Rudolph the Red-Nosed Reindeer’</a></h4>
-    <div class="link">https://www.smithsonianmag.com/innovation/magical-animation-rudolph-red-nosed-reindeer-180973841/</div>
-    <p class="text">Reindeer and dentists, puppets and LED light bulbs, Gene Autry and General Electric—these odd pairings might not seem to have much in common. But each played an important role in the making of Rudolph the Red-Nosed Reindeer, a classic Christmas special currently celebrating its 55th straight year of annual reruns.</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">The Magical Animation of ‘Rudolph the Red-Nosed Reindeer’</a></h4>
+        <div class="link">
+          https://www.smithsonianmag.com/innovation/magical-animation-rudolph-red-nosed-reindeer-180973841/</div>
+        <p class="text">Reindeer and dentists, puppets and LED light bulbs, Gene Autry and General Electric—these odd
+          pairings might not seem to have much in common. But each played an important role in the making of Rudolph the
+          Red-Nosed Reindeer, a classic Christmas special currently celebrating its 55th straight year of annual reruns.
+        </p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">Don’t Subject Your Kids to Rudolph</a></h4>
-    <div class="link">https://www.emailsanta.com/santa-claus-faq/how-old-is-rudolph-the-red-nosed-reindeer.asp#:~:text=The%20short%20answer%20is%20that,reindeer%20is%2081%20years%20old.</div>
-    <p class="text">At the dawn of the 1960s, a couple of New York admen named Arthur Rankin Jr. and Jules Bass created the Christmas special. Before that, the networks hadn’t been sure exactly how they should entertain children during the holiday season. They had largely come down on the side of edification,</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">Don’t Subject Your Kids to Rudolph</a></h4>
+        <div class="link">
+          https://www.emailsanta.com/santa-claus-faq/how-old-is-rudolph-the-red-nosed-reindeer.asp#:~:text=The%20short%20answer%20is%20that,reindeer%20is%2081%20years%20old.
+        </div>
+        <p class="text">At the dawn of the 1960s, a couple of New York admen named Arthur Rankin Jr. and Jules Bass
+          created the Christmas special. Before that, the networks hadn’t been sure exactly how they should entertain
+          children during the holiday season. They had largely come down on the side of edification,</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">Rudolph The Red Nosed Reindeer Wiki</a></h4>
-    <div class="link">https://rudolphtherednosedreindeer.fandom.com/wiki/Clarice</div>
-    <p class="text">Clarice is 8 years old, along with several other young does watch the young bucks taking part in The Reindeer Games, where she takes a interest to one of the bucks, Rudolph. After being encouraged by another young buck named Fireball to go over and talk to her,</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">Rudolph The Red Nosed Reindeer Wiki</a></h4>
+        <div class="link">https://rudolphtherednosedreindeer.fandom.com/wiki/Clarice</div>
+        <p class="text">Clarice is 8 years old, along with several other young does watch the young bucks taking part in
+          The Reindeer Games, where she takes a interest to one of the bucks, Rudolph. After being encouraged by another
+          young buck named Fireball to go over and talk to her,</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer (Rankin/Bass)</a></h4>
-    <div class="link">https://christmas-specials.fandom.com/wiki/Rudolph_the_Red-Nosed_Reindeer_(Rankin/Bass)</div>
-    <p class="text">Rudolph the Red–Nosed Reindeer is a long-running Christmas television special produced in stop-motion animation by Rankin/Bass, and the company's first Christmas special. It originally aired on NBC on December 6, 1964, and is now the world's longest-running and highest-rated television special of all time</p>
-  </li>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer (Rankin/Bass)</a></h4>
+        <div class="link">https://christmas-specials.fandom.com/wiki/Rudolph_the_Red-Nosed_Reindeer_(Rankin/Bass)</div>
+        <p class="text">Rudolph the Red–Nosed Reindeer is a long-running Christmas television special produced in
+          stop-motion animation by Rankin/Bass, and the company's first Christmas special. It originally aired on NBC on
+          December 6, 1964, and is now the world's longest-running and highest-rated television special of all time</p>
+      </li>
 
-  <li class="result-item space">
-    <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer - HISTORY</a></h4>
-    <div class="link">https://www.history.com/news/rudolph-the-red-nosed-reindeer-creation</div>
-    <p class="text">As May worked on “Rudolph the Red-Nosed Reindeer” through the summer, his wife’s health worsened. She passed away in July 1939. Now a widower and a single father, May refused the offer of his boss to give the assignment to someone else. “I needed Rudolph now more than ever,” he later wrote. Burying his grief, May finished the story in August.</p>
-  </li>
-</ul>
+      <li class="result-item space">
+        <h4 class="hedline"><a href="#">Rudolph the Red-Nosed Reindeer - HISTORY</a></h4>
+        <div class="link">https://www.history.com/news/rudolph-the-red-nosed-reindeer-creation</div>
+        <p class="text">As May worked on “Rudolph the Red-Nosed Reindeer” through the summer, his wife’s health
+          worsened. She passed away in July 1939. Now a widower and a single father, May refused the offer of his boss
+          to give the assignment to someone else. “I needed Rudolph now more than ever,” he later wrote. Burying his
+          grief, May finished the story in August.</p>
+      </li>
+    </ul>
 
-<section class="grid">
-  <h2>Related searches</h2>
-  <div class="grid-container">
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>how old is mrs. claus</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>how old is santa</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>how old is rudolph girlfriend</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>is rudolph real</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>rudolph song</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>who is the oldest raindeer</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>how tall is a raindeer</h3>
-    </div>
-    <div class="item">
-      <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-      <h3>what color is rudolph</h3>
-    </div>
-  </div>
-</section>
+    <section class="grid">
+      <h2>Related searches</h2>
+      <div class="grid-container">
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>how old is mrs. claus</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>how old is santa</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>how old is rudolph girlfriend</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>is rudolph real</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>rudolph song</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>who is the oldest raindeer</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>how tall is a raindeer</h3>
+        </div>
+        <div class="item">
+          <svg class="icon" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+            </path>
+          </svg>
+          <h3>what color is rudolph</h3>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="search-grid">
+        <div class="search-logo-start"></div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">1</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">2</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">3</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">4</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">5</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">6</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">7</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">8</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">9</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">10</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">11</div>
+        </div>
+        <div class="search-result-item">
+          <div class="search-logo"></div>
+          <div class="search-number">12</div>
+        </div>
+        <div class="search-logo-end"></div>
+      </div>
+    </section>
+
+  </section>
 
 
-</section>
+  <footer>
+    <section class="container">
+      <hr class="footer-line">
+      <div class="top">
+        <h2>Norway</h2>
+        <span class="divider-footer"></span>
+        <div class="dot"></div>
+        <h1>Oslo</h1>
+        <h2>-</h2>
+        <h2>From your Internet address</h2>
+        <h2>-</h2>
+        <h2>Use precise location</h2>
+        <h2>-</h2>
+        <h2>Learn more</h2>
+      </div>
+      <hr class="footer-line">
+      <div class="bottom">
+        <h3>Help</h3>
+        <h3>Send feedback</h3>
+        <h3>Privacy</h3>
+        <h3>Terms</h3>
+      </div>
+    </section>
+  </footer>
 
 
 
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).scroll(function () {
-  var y = $(this).scrollTop();
-  if (y > 100) {
-      $('.scroll').slideDown("fast");
-  } else {
-      $('.scroll').slideUp("fast");
-  }
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      if (y > 100) {
+        $('.scroll').slideDown("fast");
+        $('#input-scroll').val($('#input-main').val());
+      } else {
+        $('.scroll').slideUp("fast");
+      }
 
-});
-</script>
+    });
+  </script>
 </body>
-</html>
 
+</html>
