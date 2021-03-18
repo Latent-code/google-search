@@ -68,6 +68,7 @@ ul {
   padding-left: 20px;
   font-size: 14px;
   font-weight: 400;
+  min-width: 685px;
 }
 
 .search-bar-scroll, .bg {
@@ -100,7 +101,6 @@ ul {
 }
 
 .bg {
-  left: -100px;
   position: fixed;
   width: 100vw;
   height: 80px;
