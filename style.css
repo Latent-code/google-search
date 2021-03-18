@@ -103,6 +103,7 @@ ul {
 .input {
   position: relative;
   top: -5px;
+  height: 92%;
   left: -140px;
   width: 377px;
   border: none;
@@ -312,6 +313,7 @@ li:nth-child(5)>div {
   border-radius: 50px;
   height: 50px;
   width: 320px;
+  cursor: pointer;
 }
 
 .item:hover h3 {
