@@ -1,7 +1,8 @@
-body {
-  margin: 0px;
-}
+html,body { padding:0; margin:0;}
 
+* {
+  box-sizing: border-box;
+}
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -60,7 +61,7 @@ ul {
   margin-top: 20px;
   position: relative;
   height: 40px;
-  width: 102%;
+  width: 104%;
   left: -19px;
   border: 1px solid #c7c7c7;
   border-radius: 50px;
@@ -72,7 +73,7 @@ ul {
 .search-bar-scroll, .bg {
   display: none;
   position: fixed;
-  width: 663px;
+  width: 686px;
   left: 154px;
   top: 0;
   z-index: 1;
@@ -90,7 +91,7 @@ ul {
 .bg {
   left: -100px;
   position: fixed;
-  width: 200%;
+  width: 100vw;
   height: 80px;
   background-color: white;
 }
@@ -187,7 +188,12 @@ ul {
 }
 
 .header-line {
-  margin: 0px -2000px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   height: 1px;
   background-color: #eeeeee;
   border: none;
@@ -429,7 +435,7 @@ footer div.top h2 {
 }
 
 .footer-line {
-  margin: 0px -2000px;
+  margin: 0px -200px;
   height: 1px;
   background-color: #dadce0;
   border: none;
